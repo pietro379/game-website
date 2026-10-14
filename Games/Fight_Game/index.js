@@ -271,7 +271,7 @@ animate()
 
 window.addEventListener('keydown', (event) => {
   if (!player.dead) {
-    switch (event.key) {
+    switch (event.key.length === 1 ? event.key.toLowerCase() : event.key) {
       case 'd':
         keys.d.pressed = true
         player.lastKey = 'd'
@@ -290,7 +290,7 @@ window.addEventListener('keydown', (event) => {
   }
 
   if (!enemy.dead) {
-    switch (event.key) {
+    switch (event.key.length === 1 ? event.key.toLowerCase() : event.key) {
       case 'ArrowRight':
         keys.ArrowRight.pressed = true
         enemy.lastKey = 'ArrowRight'
@@ -311,7 +311,7 @@ window.addEventListener('keydown', (event) => {
 })
 
 window.addEventListener('keyup', (event) => {
-  switch (event.key) {
+  switch (event.key.length === 1 ? event.key.toLowerCase() : event.key) {
     case 'd':
       keys.d.pressed = false
       break
@@ -321,7 +321,7 @@ window.addEventListener('keyup', (event) => {
   }
 
   // enemy keys
-  switch (event.key) {
+  switch (event.key.length === 1 ? event.key.toLowerCase() : event.key) {
     case 'ArrowRight':
       keys.ArrowRight.pressed = false
       break

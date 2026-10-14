@@ -115,16 +115,16 @@ window.onload = () => {
 
     (function setup() {
 
-        canvas.style.top = Tetromino.BLOCK_SIZE;
-        canvas.style.left = Tetromino.BLOCK_SIZE;
+        canvas.style.top = `${Tetromino.BLOCK_SIZE}px`;
+        canvas.style.left = `${Tetromino.BLOCK_SIZE}px`;
 
         ctx.canvas.width = FIELD_WIDTH * Tetromino.BLOCK_SIZE;
         ctx.canvas.height = FIELD_HEIGHT * Tetromino.BLOCK_SIZE;
 
         // Scale background
         const scale = Tetromino.BLOCK_SIZE / 13.83333333333;
-        background.style.width = scale * 166;
-        background.style.height = scale * 304;
+        background.style.width = `${scale * 166}px`;
+        background.style.height = `${scale * 304}px`;
 
         // Offset each block to the middle of the table width
         const middle = Math.floor(FIELD_WIDTH / 2);
